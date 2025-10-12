@@ -1,12 +1,23 @@
 
-import React from "react";
+import React, { useState } from "react";
 import './../styles/App.css';
+import Tooltip from "./Tooltip";
 
 const App = () => {
+  const [show,setShow] = useState(false)
   return (
-    <div>
+    <div 
+    className="tooltip"
+        onMouseEnter={() => setShow(true)} 
+        onMouseLeave={() => setShow(false)}
+    >
         {/* Do not remove the main div */}
-        Hello
+        {show && <h1 style={{backgroundColor:"red"}}>This is a tooltip</h1> }
+        <h1 
+
+        >Hover Over Me</h1>
+        <hr/>
+        <Tooltip text={"This is another tooltip"}/>
     </div>
   )
 }
