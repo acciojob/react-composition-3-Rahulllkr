@@ -12,7 +12,7 @@ const App = () => {
         onMouseLeave={() => setShow(false)}
       >
         {/* Do not remove the main div */}
-        {show && <h1 style={{ backgroundColor: "red" }}>This is a tooltip</h1>}
+        {show && <h2 style={{ backgroundColor: "red" }}>This is a tooltip</h2>}
         <h1>Hover Over Me</h1>
       </div>
       <hr />
