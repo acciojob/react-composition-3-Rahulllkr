@@ -1,25 +1,21 @@
-import React, { useState } from "react";
-import "./../styles/App.css";
+import React from "react";
 import Tooltip from "./Tooltip";
 
 const App = () => {
-  const [show, setShow] = useState(false);
   return (
-    <>
-      <div
-        className="tooltip"
-        onMouseEnter={() => setShow(true)}
-        onMouseLeave={() => setShow(false)}
-      >
-        {/* Do not remove the main div */}
-        {show && <h2 style={{ backgroundColor: "red" }}>This is a tooltip</h2>}
-        <h1>Hover Over Me</h1>
-      </div>
+    <div>
+      {/* Parent Tooltip */}
+      <Tooltip text="This is a tooltip">
+        <h2>Hover over me</h2>
+      </Tooltip>
+
       <hr />
-      <div>
-        <Tooltip text={"This is another tooltip"} />
-      </div>
-    </>
+
+      {/* Child Tooltip */}
+      <Tooltip text="This is another tooltip">
+        <p>Hover over me to see another tooltip</p>
+      </Tooltip>
+    </div>
   );
 };
 
