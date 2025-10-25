@@ -11,7 +11,7 @@ const App = () => {
       <hr />
 
       <Tooltip text="This is another tooltip">
-        <p>Hover over me to see</p>
+        <p>Hover over me to see another tooltip</p>
       </Tooltip>
     </div>
   );
